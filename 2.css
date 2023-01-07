@@ -11,8 +11,33 @@ body{
     align-items: center;
     background-color: black;
 }
-#title{
-    color: rgb(67, 154, 128);
+.bg{
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 180vh;
+    font-size: 450px;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    padding-top: 100px;
+}
+.bg::before{
+    content: "";
+    background-image: inherit;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -99;
+}
+.title{
     text-align: center;
     flex-direction: row;
     justify-content: center;
